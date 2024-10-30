@@ -15,18 +15,27 @@ This repository contains a structured pipeline for analyzing bone data through m
 
 ## Requirements
 
-This pipeline relies on several Python packages. Install them using the following command:
+This pipeline relies on several Python packages, which can be installed automatically via the provided Conda environment file. 
 
-```bash
-pip install pandas numpy matplotlib scipy scikit-image seaborn
-```
+### Installation
+
+1. Ensure you have [Conda](https://docs.conda.io/en/latest/miniconda.html) installed on your system.
+2. Clone the repository and navigate to the directory
+3. Create the Conda environment using the environment.yml file:
+   ```bash
+   conda env create -f environment.yml
+4. Activate the environment:
+   ```bash
+   conda activate BoneSPDM
+
+These commands will set up the necessary environment with all required dependencies.
 
 ## Workflow
 
 ### 1. Data Import
 The first step is to import the necessary data files, which include:
-- **CSV Files**: Contains quantitative data associated with the bone samples.
-- **IMS Image Files**: High-resolution images for bone samples.
+- **CSV Files**: Contains quantitative data (positions) associated with the bone samples.
+- **IMS Image Files**: Images for bone samples.
 
 
 ### 2. Data Inspection and Adjustments
@@ -51,5 +60,3 @@ The final step clusters the transformed data points (e.g., HSCs and random dots)
 1. **Run each section of the pipeline sequentially**, ensuring all paths and parameters are correctly set for your specific dataset.
 2. **Inspect intermediate visualizations** to verify data quality and make adjustments as needed.
 3. **Save output figures** and clustering data as needed for further analysis or reporting.
-
-For further details on each stage, refer to the code comments and adjust parameters based on your analysis needs.
