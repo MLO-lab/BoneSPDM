@@ -29,6 +29,19 @@ This pipeline relies on several Python packages, which can be installed automati
    conda activate BoneSPDM
 
 These commands will set up the necessary environment with all required dependencies.
+### Data Arrangement
+
+To ensure proper functionality, organize your data in the following folder structure within the project’s root directory:
+
+- **Data folders**: Organize other data files by time points in subdirectories named as follows:
+  - **`d0/`**: For day 0 data.
+  - **`d5/`**: For day 5 data.
+  - **`d10/`**: For day 10 data.
+  - **`d15/`**: For day 15 data.
+  - **`d30/`**: For day 30 data.
+  - **`reference_bone/`**: Place the reference bone image in this folder.
+
+Each folder should contain the relevant data files needed for analysis at that time point. This structured arrangement ensures smooth data processing within the pipeline.
 
 ## Workflow
 
