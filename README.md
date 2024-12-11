@@ -6,7 +6,7 @@ This repository contains a structured pipeline for analyzing bone data through m
 -  [Workflow](#workflow)
    - [1. Data Import](#1-data-import)
    - [2. Data Inspection and Adjustments](#2-data-inspection-and-adjustments)
-   - [3. one Alignment and Transformation](#3-bone-alignment-and-transformation)
+   - [3. Bone Alignment and Transformation](#3-bone-alignment-and-transformation)
    - [4. KDE Calculation and Visualization](#4-kde-calculation-and-visualization)
    - [5. Clustering, Prediction and Visualization](#5-clustering-prediction-and-visualization)
 - [Usage](#usage)
