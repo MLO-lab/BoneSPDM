@@ -8,7 +8,7 @@ This repository contains a structured pipeline for analyzing bone data through m
    - [Data Inspection and Adjustments](#data-inspection-and-adjustments)
    - [Bone Alignment and Transformation](#bone-alignment-and-transformation)
    - [KDE Calculation and Visualization](#kde-calculation-and-visualization)
-   - [Hierarchical Clustering and Heatmap](#hierarchical-clustering-and-heatmap)
+   - [Clustering, Prediction and Visualization](#clustering-prediction-and-visualization)
 3. [Usage](#usage)
 
 ---
@@ -31,7 +31,7 @@ This pipeline relies on several Python packages, which can be installed automati
 These commands will set up the necessary environment with all required dependencies.
 ### Data Arrangement
 
-To ensure proper functionality, organize your data in the following folder structure within the project’s root directory:
+To ensure proper functionality, organize your data in the following folder structure within the project's root directory:
 
 - **Data folders**: Organize other data files by time points in subdirectories named as follows:
   - **`d0/`**: For day 0 data.
@@ -40,6 +40,7 @@ To ensure proper functionality, organize your data in the following folder struc
   - **`d15/`**: For day 15 data.
   - **`d30/`**: For day 30 data.
   - **`reference_bone/`**: Place the reference bone image in this folder.
+  - **`inhibitor/`**: The inhibitor data should be placed under different folder and separated by time points as well. For example, `inhibitor/d15/` contains day 15 inhibitor data.
 
 Each folder should contain the relevant data files needed for analysis at that time point. This structured arrangement ensures smooth data processing within the pipeline.
 
@@ -63,8 +64,8 @@ In this step, each bone sample is aligned to a reference bone. All samples are t
 The pipeline calculates the Kernel Density Estimate (KDE) to determine spatial probability density for the transformed data.
 
 
-### 5. Hierarchical Clustering and Heatmap
-The final step clusters the transformed data points (e.g., HSCs and random dots) using hierarchical clustering. A heatmap of the clustered data is also generated to visualize spatial relationships.
+### 5. Clustering, Prediction and Visualization
+The final step clusters the transformed data points (e.g., HSCs and random dots) using consensus clustering and decide the optimal cluster numbers based on the Silhouette Score. Random forest is applied to predict the cluster labels for data with inhibitos. Heatmaps of the clustered data are also generated to visualize spatial relationships. Scatter plots, and stacked bar plots are also available. Finally, the Mann-Whitney U test is performed to compare the cluster compositions between different groups.
 
 ---
 
