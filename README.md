@@ -2,14 +2,14 @@
 This repository contains a structured pipeline for analyzing bone data through multiple stages, including data import, visualization, alignment, KDE calculation, and clustering analysis. The pipeline is designed for CSV and IMS image files and processes spatial data for KDE and hierarchical clustering visualization.
 
 ## Table of Contents
-1. [Requirements](#requirements)
-2. [Workflow](#workflow)
-   - [Data Import](#data-import)
-   - [Data Inspection and Adjustments](#data-inspection-and-adjustments)
-   - [Bone Alignment and Transformation](#bone-alignment-and-transformation)
-   - [KDE Calculation and Visualization](#kde-calculation-and-visualization)
-   - [Clustering, Prediction and Visualization](#clustering-prediction-and-visualization)
-3. [Usage](#usage)
+-  [Requirements](#requirements)
+-  [Workflow](#workflow)
+   - [1. Data Import](#1-data-import)
+   - [2. Data Inspection and Adjustments](#2-data-inspection-and-adjustments)
+   - [3. one Alignment and Transformation](#3-bone-alignment-and-transformation)
+   - [4. KDE Calculation and Visualization](#4-kde-calculation-and-visualization)
+   - [5. Clustering, Prediction and Visualization](#5-clustering-prediction-and-visualization)
+- [Usage](#usage)
 
 ---
 
@@ -33,14 +33,15 @@ These commands will set up the necessary environment with all required dependenc
 
 To ensure proper functionality, organize your data in the following folder structure within the project's root directory:
 
-- **Data folders**: Organize other data files by time points in subdirectories named as follows:
+- **Data folders (without inhibitor)**: Organize other data files by time points in subdirectories named as follows:
   - **`d0/`**: For day 0 data.
   - **`d5/`**: For day 5 data.
   - **`d10/`**: For day 10 data.
   - **`d15/`**: For day 15 data.
   - **`d30/`**: For day 30 data.
   - **`reference_bone/`**: Place the reference bone image in this folder.
-  - **`inhibitor/`**: The inhibitor data should be placed under different folder and separated by time points as well. For example, `inhibitor/d15/` contains day 15 inhibitor data.
+- **Data Folders (with inhibitor)**: If inhibitor data is available, organize it in a separate directory from the data without inhibitors. Subdivide this directory by time points as follows:
+   - **`d15`**: For inhibitor data for day 15. For example, `inhibitor/d15/` would store day 15 inhibitor data.
 
 Each folder should contain the relevant data files needed for analysis at that time point. This structured arrangement ensures smooth data processing within the pipeline.
 
