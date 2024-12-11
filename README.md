@@ -33,7 +33,7 @@ These commands will set up the necessary environment with all required dependenc
 
 To ensure proper functionality, organize your data in the following folder structure within the project's root directory:
 
-- **Data folders (without inhibitor)**: Organize other data files by time points in subdirectories named as follows:
+- **Data Folders (without inhibitor)**: Organize other data files by time points in subdirectories named as follows:
   - **`d0/`**: For day 0 data.
   - **`d5/`**: For day 5 data.
   - **`d10/`**: For day 10 data.
