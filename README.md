@@ -75,3 +75,12 @@ The final step clusters the transformed data points (e.g., HSCs and random dots)
 1. **Run each section of the pipeline sequentially**, ensuring all paths and parameters are correctly set for your specific dataset.
 2. **Inspect intermediate visualizations** to verify data quality and make adjustments as needed.
 3. **Save output figures** and clustering data as needed for further analysis or reporting.
+
+---
+## Example
+The transforamtion.ipynb notebook serves as an example illustrating the transformation of the bone samples to a reference space. 
+1. **Parameter Setting**: Keep the parameters as they are, or adjust them according to your needs based on the recommendations in the notebook.
+2. **Outline Visualization**: Visualize the outlines of the bone samples.
+3. **Generate Data**: Randomly generate data as the cells. Optionally, we also included a horizontal line as another example of the data.
+4. **Generate Structured Anchors**: Generate structured anchors for the transformation.
+5. **Perform Transformation**: Perform the transformation of the data to the reference space.
